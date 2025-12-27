@@ -228,7 +228,7 @@ func (schema *Schema) describeSchema(indent string) string {
 		result += indent + "title: " + *(schema.Title) + "\n"
 	}
 	if schema.Description != nil {
-		result += indent + "description: " + *(schema.Description) + "\n"
+		result += indent + "description: " + fmt.Sprintf("%q",*(schema.Description)) + "\n"
 	}
 	if schema.Default != nil {
 		result += indent + "default:\n"
